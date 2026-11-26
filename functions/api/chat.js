@@ -8,7 +8,7 @@ const json = (data, status = 200) =>
     }
   });
 
-export async function onRequest({ request, env }) {
+export async function onRequestPost({ request, env }) {
   if (request.method !== "POST") {
     return json({ error: "Method not allowed." }, 405);
   }
